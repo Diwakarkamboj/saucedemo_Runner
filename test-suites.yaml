@@ -1,0 +1,11 @@
+version: "3"
+services:
+  saucelabs:
+    image: diwakar15/sauced
+    environment:
+    - BROWSER
+    - HUB_HOST=hub    
+    - THREAD_COUNT=3
+    - TEST_SUITE=saucelabs.xml
+    volumes:
+    - ./output/saucelabs:/home/saucedemo-docker/test-output  
